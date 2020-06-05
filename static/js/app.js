@@ -1,6 +1,5 @@
 // from data.js
 var tableData = data;
-
 var button = d3.select("#filter-btn");
 
 // Select the form
