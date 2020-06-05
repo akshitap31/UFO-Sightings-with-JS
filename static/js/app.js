@@ -1,5 +1,19 @@
 // from data.js
 var tableData = data;
+
+function init() {
+    for( var j=0; j < tableData.length; j++){
+        var entry=tableData[j]
+        var row= d3.select("tbody").append("tr");   
+        row.append("td").text(entry.datetime);
+        row.append("td").text(entry.city);
+        row.append("td").text(entry.state);
+        row.append("td").text(entry.country);
+        row.append("td").text(entry.shape);
+        row.append("td").text(entry.durationMinutes);
+        row.append("td").text(entry.comments);
+    }
+}
 var button = d3.select("#filter-btn");
 
 // Select the form
@@ -49,3 +63,4 @@ function sightings() {
         row.append("td").text(entry.comments);
     }
 }
+init()
